@@ -1,0 +1,13 @@
+header { 
+    background-color: rgb(155, 114, 114);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+img {
+    width: 10%;
+}
+a{
+    padding: 10px;
+}
