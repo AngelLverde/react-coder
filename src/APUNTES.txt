@@ -1,0 +1,27 @@
+Por default, se exporta un solo archivo 
+los components suelende exportarse por default
+siempre que usamos map. usamos una key unica
+
+//EXTENSION MARKDOWN PREVIEW ENHANCED//
+los archivos que no tienen ./ lo busca en node-modules
+Si tiene ./ lo busca en la raiz, en la carpeta src
+
+(import App from './App';) cuando llamo a los archivos asi, sin extension, react entiende que son archivos js o jsx
+
+
+COMPONENTES FUNCIONALES 
+-Importar React (opcional)
+- Crear una FUNCIONALES
+- El nombre de la funcion debe comenzar con mayusculas
+- La funcion debe retornar algo 
+- Exportar el componente
+
+TODO COMPONENTE PUEDE TENER
+-Props ( informacion que le puede llegar a un componente por medio de los parametros de la funcion)
+*La declaracion de las props va en el momento de importar un component  e*
+
+-States
+.ciclos de vida
+-Metodos del ciclo de vida
+
+
