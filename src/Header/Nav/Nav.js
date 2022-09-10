@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Navbar";
+
 
 export const Nav = ({categorias}) => {
     return (
@@ -12,4 +12,3 @@ export const Nav = ({categorias}) => {
 
 }
 
-export default Navbar

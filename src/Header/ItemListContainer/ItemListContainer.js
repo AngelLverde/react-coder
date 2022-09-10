@@ -1,10 +1,11 @@
 import React from "react"
 
 
-export const ItemListContainer = () => {
+ const ItemListContainer = (greeeting) => {
     return (
-        <h1> Bienvenidos a Cartagena Showroom</h1>
+        <h1> {greeeting}</h1>
     )
 }
 
 
+export default ItemListContainer

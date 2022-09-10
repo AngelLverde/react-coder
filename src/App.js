@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "./Header/Navbar"
-import {ItemListContainer} from './Header/ItemListContainer/ItemListContainer';
-import { CartWidget } from "./Header/CartWidget/CartWidget";
+import ItemListContainer from './Header/ItemListContainer/ItemListContainer';
 
 
 const App = () => {
@@ -11,8 +10,8 @@ const App = () => {
     
 <>
     <Navbar/>
-    <ItemListContainer propgreeting = "Bienvenidos a Cartagena" />
-     <CartWidget/>
+    <ItemListContainer greeeting={"Bienvenidos a Cartegena Showroom"}/>
+  
     </>
   )
 }

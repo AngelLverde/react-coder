@@ -1,11 +1,14 @@
 import React from "react"
+import AccessAlarmsIcon from '@mui/icons-material/AccessAlarms';
 
 
 
-export const CartWidget = () => {
+ const CartWidget = () => {
     return (  
-        <img src= '../CartWidget.jpg' alt=""/>
+        <AccessAlarmsIcon/>
    ) }
 
 
 
+
+export default CartWidget
