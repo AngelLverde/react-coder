@@ -1,7 +1,9 @@
 import React from "react";
 import { ItemCount } from "../../ItemCount/ItemCount";
 
-
+const onAddd = (count) => {
+    console.log("producto agregado");
+}
 
  const ItemListContainer = ({greeting}) => {
     return (

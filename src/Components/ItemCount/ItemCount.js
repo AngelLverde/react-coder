@@ -10,6 +10,11 @@ const ItemCount = ({initial, stock,onAdd}) => {
     const increase = () => count < stock && setCount(count +1)
     const decrease = () => count > initial && setCount ( count -1)
 
+    const onAddd = () => {
+        setCount (initial)
+        onAdd(count)
+        
+    };
 
 
 
@@ -19,7 +24,7 @@ const ItemCount = ({initial, stock,onAdd}) => {
      <button disabled={count === initial} onClick={decrease} > - </button>
      <text>{count}</text>
      <button disabled={count === stock} onClick={increase}> + </button>
-     <button > Agregar al carrito </button>
+     <button onClick={onAddd}> Agregar al carrito </button>
        </div>
     
 
