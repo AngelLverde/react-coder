@@ -1,0 +1,9 @@
+Por default, se exporta un solo archivo 
+los components suelende exportarse por default
+siempre que usamos map. usamos una key unica
+
+//EXTENSION MARKDOWN PREVIEW ENHANCED//
+los archivos que no tienen ./ lo busca en node-modules
+Si tiene ./ lo busca en la raiz, en la carpeta src
+
+(import App from './App';) cuando llamo a los archivos asi, sin extension, react entiende que son archivos js o jsx

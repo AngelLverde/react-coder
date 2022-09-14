@@ -1,11 +1,11 @@
 import React from "react"
-import AccessAlarmsIcon from '@mui/icons-material/AccessAlarms';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
 
  const CartWidget = () => {
     return (  
-        <AccessAlarmsIcon/>
+        <ShoppingCartIcon/>
    ) }
 
 

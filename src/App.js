@@ -1,17 +1,20 @@
 import React from "react";
-import Navbar from "./Header/Navbar"
-import ItemListContainer from './Header/ItemListContainer/ItemListContainer';
+import Navbar from "./Components/Navbar/Navbar";
+import ItemListContainer from "./Components/Container/ItemListContainer/ItemListContainer";
+
+// import Productos from "./Components/Productos";
 
 
 const App = () => {
-  
-  return (
 
-    
-<>
+const mensaje ='Bienvenidos a Cartagena Showroom';
+
+
+  return (
+    <> 
     <Navbar/>
-    <ItemListContainer greeeting={"Bienvenidos a Cartegena Showroom"}/>
-  
+    <ItemListContainer greeting ={mensaje}/>
+    
     </>
   )
 }
