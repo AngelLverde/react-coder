@@ -1,8 +1,8 @@
 import React from "react";
 import { ItemCount } from "../../ItemCount/ItemCount";
 
-const onAddd = (count) => {
-    console.log("producto agregado");
+const onAddd = (quantity) => {
+    console.log(` Compraste ${quantity} unidades `);
 }
 
  const ItemListContainer = ({greeting}) => {
@@ -10,7 +10,7 @@ const onAddd = (count) => {
         <>
 
     <h1> {greeting}</h1>
-    <ItemCount initial={1} stock ={10} onAdd={() => {}} />
+    <ItemCount initial={1} stock ={10} onAdd={onAddd} />
 
 
 
