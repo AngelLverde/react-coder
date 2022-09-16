@@ -1,20 +1,42 @@
-import React from "react";
-import { ItemCount } from "../../ItemCount/ItemCount";
+import { useEffect } from "react";
+import { ItemList } from "../../ItemList/ItemList";
+import { products } from "../../../assets/productos";
+import { customFecth } from "../../utils/customFetch";
+import { useState, } from "react";
+// const onAddd = (quantity) => {
+//     console.log(` Compraste ${quantity} unidades `);
+// }
 
-const onAddd = (quantity) => {
-    console.log(` Compraste ${quantity} unidades `);
-}
+
 
  const ItemListContainer = ({greeting}) => {
+
+const [ listProducts,setListProducts] = useState([])
+const [loading, setLoading] = useState(true)
+
+useEffect (()=> {
+    setLoading(true)
+customFecth(products)
+.then(res => { 
+    setLoading(false)
+    setListProducts(res)
+})
+}, [])
+// console.log (listProducts)
+ 
     return (
         <>
 
     <h1> {greeting}</h1>
-    <ItemCount initial={1} stock ={10} onAdd={onAddd} />
+    {
+        loading ?
+        <text> Aguarde mientras se cargan los productos</text>:
+    
 
-
-
+    <ItemList listProducts={listProducts}/>
+    }
     </>
+
     )
 }
 

@@ -22,6 +22,33 @@ TODO COMPONENTE PUEDE TENER
 
 -States
 .ciclos de vida
--Metodos del ciclo de vida
 
+
+
+-Metodos del ciclo de vida
+.Mount
+(constructor)
+(render)
+(componentDidUnmount)
+
+
+
+.Update
+
+(constructor)
+(render)
+(componentDidUpdate)
+
+.unmount
+(componentWillunmont)
+()
+()
+
+
+
+    ➡️  Get: obtener informacion. Ejemplo consulta a API que tieen productos.
+    ➡️  Post: Cargar informacion enviar informacion al backend y por lo tanto a una base de datos.
+    ➡️  Delete: Borrar. Ejemplo un delete del usuario para que no le genere de SPAM.
+    ➡️  PUT: Se utiliza para modificaciones. Ejemplo para modificar un usuario.
+    ➡️  PATH: Te permite remplazar todos los datos de un usuario por ejemplo.
 
