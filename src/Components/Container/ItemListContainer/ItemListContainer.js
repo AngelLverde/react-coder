@@ -11,30 +11,30 @@ import { useState, } from "react";
 
  const ItemListContainer = ({greeting}) => {
 
-const [ listProducts,setListProducts] = useState([])
-const [loading, setLoading] = useState(true)
+// const [ listProducts,setListProducts] = useState([])
+// const [loading, setLoading] = useState(true)
 
-useEffect (()=> {
-    setLoading(true)
-customFecth(products)
-.then(res => { 
-    setLoading(false)
-    setListProducts(res)
-})
-}, [])
+// useEffect (()=> {
+//     setLoading(true)
+// customFecth(products)
+// .then(res => { 
+//     setLoading(false)
+//     setListProducts(res)
+// })
+// }, [])
 // console.log (listProducts)
  
     return (
         <>
 
     <h1> {greeting}</h1>
-    {
+    {/* {
         loading ?
         <text> Aguarde mientras se cargan los productos</text>:
     
 
-    <ItemList listProducts={listProducts}/>
-    }
+    // <ItemList listProducts={listProducts}/> */}
+    
     </>
 
     )
