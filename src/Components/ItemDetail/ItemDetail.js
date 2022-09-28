@@ -1,24 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export const customFecth = (products) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(()=> {
-            resolve(products)
-        }, 2000)
-        
-    })
-}
+
+
 
 export const ItemDetail = ({data}) => {
     return (
-        
-        <div className='itemcontainer'>
+        <link to={`/detalle/${data.id}`} className='itemcontainer'>
        
-<h1> {data.products}</h1>
-       <p> {data.description}</p>
-       <img src={data.image} />
-
-        </div>
+       <p>{data.products} </p>
+              <p> {data.description}</p>
+              <img src={data.image} />
+       
+        </link>
+       
         
     );
 }

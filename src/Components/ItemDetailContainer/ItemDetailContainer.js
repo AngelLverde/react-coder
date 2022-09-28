@@ -2,6 +2,8 @@
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useEffect, useState } from "react";
 import { customFecth } from "../../Components/utils/customFetch"
+import {useParams} from 'react-router-dom';
+
 
 
 const products = {id: 1,
@@ -15,29 +17,33 @@ stock: 5};
 
 
 
-export const ItemDetailContainer = () => {
+const ItemDetailContainer = () => {
 
-const [ listProducts,setListProducts] = useState([])
-const [loading, setLoading] = useState(true)
+    const [ productos,setListProducts] = useState([])
+    const {idDetalle} = useParams ();
+    
+    useEffect (()=> {
+    const productos = new Promise(resolve => {
+        setTimeout(() => {
+            resolve (products);
+        
+        }, 3000);
+        
+     });
 
-useEffect (()=> {
-    setLoading(true)
-customFecth(products)
-.then(res => { 
-    setLoading(false)
-    setListProducts(res)
-})
-}, [])
-console.log (listProducts)
+     productos.then( res => setListProducts(res.find(products => products.id === parseInt(idDetalle))));
+    }, []) 
+    
 
 
     return (
         
-            loading ?
-            <text> Aguarde mientras se cargan los productos</text>:
+           <div>
+            <ItemDetail listProducts={products}/>
+           </div>
         
     
-            <ItemDetail data={products}/>
+            
         
         
     );

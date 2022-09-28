@@ -1,26 +1,38 @@
 import React from 'react'
-import logo from '../../assets/logo.jpg'
+import logo from '../../assets/icono-carrito-compra.png'
 import "./Navbar.css";
 import { Nav } from '../Nav/Nav';
+import CartWidget from '../CartWidget/CartWidget';
+import { NavLink } from 'react-router-dom';
 
 
 
 const Navbar = () => {
 
     const categorias = [
-        {id:0, nombre: 'categoria 1'},
-        {id:1, nombre: 'categoria 2'},
-        {id:2, nombre: 'categoria 3'},
-        {id:3, nombre: 'categoria 4'}, 
+        {id:0, nombre: 'Celulares', ruta:'/categoria/Celulares'},
+        {id:1, nombre: 'Tablets', ruta:'/categoria/Tablets'},
+        {id:2, nombre: 'Parlantes', ruta:'/categoria/Parlantes'},
+        {id:3, nombre: 'Computadoras', ruta:'/categoria/Computadoras'}, 
     ]
 
-
+ 
     return (
         <header>
-        <img src={logo}  alt='logo'/>
+            <NavLink to={"/"}>
+            <img src={logo}  alt='logo'/>
+            </NavLink>
+      
         <h1> Mi primer pagina con React </h1>
-        <Nav categorias={categorias}/>
-   
+        <NavLink>
+<Nav categorias={categorias} />
+        </NavLink>
+        
+        <NavLink to= "/Cart"> 
+        <CartWidget /> 
+        </NavLink>
+        
+        
         
         </header>
         
