@@ -23,7 +23,7 @@ import { ItemCount } from '../ItemCount/ItemCount';
        <img src={data.image} />
 {
     goToCart
-    ? <Link to='/cart'> Finalizar compra</Link>
+    ? <Link to='/cart'> Finalizar compra.</Link>
     :<ItemCount initial={0} stock = {5} onAdd={onAdd} />
 }
  </link>
