@@ -6,9 +6,9 @@ import { useState, } from "react";
 import { useParams } from "react-router-dom";
 
 
-// const onAddd = (quantity) => {
-//     console.log(` Compraste ${quantity} unidades `);
-// }
+const onAddd = (quantity) => {
+    console.log(` Compraste ${quantity} unidades `);
+}
 
 
 
