@@ -4,19 +4,18 @@ import { products } from "../../../assets/productos";
 import { customFecth } from "../../utils/customFetch";
 import { useState, } from "react";
 import { useParams } from "react-router-dom";
+import { ItemCount } from "../../ItemCount/ItemCount";
 
 
-const onAddd = (quantity) => {
-    console.log(` Compraste ${quantity} unidades `);
-}
+
 
 
 
 const ItemListContainer = ({greeting}) => {
 
 const [ listProducts,setListProducts] = useState([])
-const {idCategoria} = useParams ();
-const [loading, setLoading] = useState(true)
+const {idCategoria} = useParams ()
+const [loading, setLoading] = useState([true])
 
 useEffect (()=> {
     setLoading(true)
@@ -31,22 +30,26 @@ customFecth(products)
         setListProducts(products)
     }
 });
-
+ 
 
 }, [idCategoria])
 
+const onAdd = (quantity) => {
+    console.log(`compraste ${quantity} unidades`);
+}
  
     return (
         <>
 
     <h1> {greeting}</h1> 
     {
-        loading ?
+        loading ? 
         <text> Aguarde mientras se cargan los productos</text>:
-    
+      
+       <ItemList listProducts={listProducts}/> }
 
-    <ItemList listProducts={listProducts}/>}
-    
+       <ItemCount initial={0} stock={5} onAdd={onAdd} />
+
     </>
 
     ) 

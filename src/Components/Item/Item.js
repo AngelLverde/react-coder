@@ -1,20 +1,22 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
+import {} from '../../assets/productos'
 import  "./ItemStyle.css";
-import { } from '../../assets/productos';
+
+
 
 
 const Item = ({ product }) => { 
+   
 
     return(
-
+ 
         <> 
-        <div className='itemcontainer'>
+
         <p> {product.product}</p> 
-       <img className='imagenes-productos' src={ product.image} alt="" /> 
-         <h2 className='precio-producto'>${product.price}</h2>
-        </div>
+        <img className='imagenes-productos' src={ product.image} alt="" />
+        <Link to= {`/detalle/${product.id}`}><button> Mas detalles </button></Link>
       
-       
         </>
         
     )

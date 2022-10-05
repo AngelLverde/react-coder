@@ -4,5 +4,5 @@ export const customFecth = (products) => {
             resolve(products)
         }, 2000)
         
-    })
-}
+    });
+};

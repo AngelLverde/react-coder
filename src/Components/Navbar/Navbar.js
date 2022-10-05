@@ -23,7 +23,7 @@ const Navbar = () => {
             <img src={logo}  alt='logo'/>
             </NavLink>
       
-        <h1> Mi primer pagina con React </h1>
+        <h1> Tienda Online </h1>
         <NavLink>
 <Nav categorias={categorias} />
         </NavLink>

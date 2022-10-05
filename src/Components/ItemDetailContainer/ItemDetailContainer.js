@@ -1,4 +1,3 @@
-
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useEffect, useState } from "react";
 import { customFecth } from "../../Components/utils/customFetch"
@@ -12,27 +11,29 @@ import { products } from "../../assets/productos";
 
 const ItemDetailContainer = () => {
 
-    const [ listProducts,setListProducts] = useState([]);
-    const {idDetalle} = useParams ();
-    console.log(idDetalle);
+    const [ product, setProduct] = useState({})
+    const { detalleId } = useParams() 
+    console.log(detalleId);
     
-    useEffect (() =>{ 
-        customFecth (products)
-        .then (response => {
-            setListProducts(response[parseInt(idDetalle)])
-        }
-        )
+    useEffect (() => { 
+        customFecth (products).then((response) => {
+            console.log(response)
+            const product = response.find(
+                (product) => product.id === Number(detalleId)
+            )
+            setProduct(product)
+        })
     
-    }, [idDetalle])
+    }, [detalleId])
 
     
 
     return (
         
-           <div>
-            <ItemDetail listProducts={products}/>
-           </div>
-        
+      <> 
+            <ItemDetail product ={product}/>
+      
+            </>
     
             
         

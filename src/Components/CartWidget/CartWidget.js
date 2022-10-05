@@ -1,8 +1,11 @@
-import React from "react"
+import React from "react";
+
 import '../CartWidget/CartWidget.css';
 
 
  const CartWidget = () => {
+  
+   
     return (  
         <i className="bi-cart"> </i>
    );
@@ -11,4 +14,4 @@ import '../CartWidget/CartWidget.css';
 
 
 
-export default CartWidget
+export default CartWidget;

@@ -2,7 +2,7 @@
 
 export const products = [
     {
-        id: 1,
+        id:1,
         image: "https://http2.mlstatic.com/D_NQ_NP_2X_764503-MLA47592977306_092021-F.webp",
         product: "Parlante JBL Xtreme 3 portátil con bluetooth black",
         categoria: "Parlantes",
@@ -11,7 +11,7 @@ export const products = [
         stock: 5
     },
     {
-        id: 3,
+        id:3,
         image: "https://http2.mlstatic.com/D_NQ_NP_2X_801112-MLA46516512347_062021-F.webp",
         product: "Aple Macbook Air (13 pulgadas, 2020, Chip M1, 256 GB de SSD, 8 GB de RAM) - Gris espacial",
         categoria: "Computadoras",
@@ -20,7 +20,7 @@ export const products = [
         stock: 1
     },
     {
-        id: 5,
+        id:5,
         image: "https://http2.mlstatic.com/D_NQ_NP_2X_647943-MLA46163981495_052021-F.webp",
         product: "Motorola Edge Edge 256 GB gris midnight 6 GB RAM",
         categoria: "Celulares",
@@ -29,12 +29,12 @@ export const products = [
         stock: 12
     },
     {
-        id: 15,
+        id:15,
         image: "https://http2.mlstatic.com/D_NQ_NP_2X_771162-MLA44207566690_112020-F.webp",
         product: "Tablet Lenovo Yoga Smart Tab YT-X705F 10.1  64 GB iron gray y 4GB de memoria RAM",
         categoria: "Tablets",
         description: "Esta tablet es ideal para cada una de tus actividades: editar fotos, documentos, navegar por internet y ¡mucho más! Su diseño delgado, compacto y portátil es la combinación perfecta de rendimiento y versatilidad. ",
         price: 241.999,
-        stock: 1
+        stock: 5
     },
 ]
