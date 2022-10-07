@@ -5,6 +5,8 @@ import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailCont
 import Cart from "./Components/Cart/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartProvider from './Context/CartContext';
+import { CartContext } from "./Context/CartContext";
+import { useContext } from "react";
 
 
 
@@ -13,6 +15,7 @@ import CartProvider from './Context/CartContext';
 const App = () => {
 
 const mensaje ='Bienvenidos a Cartagena Showroom';
+
 
 
   return (

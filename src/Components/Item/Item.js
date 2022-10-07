@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {} from '../../assets/productos'
+import { useContext } from 'react';
+import {CartContext} from  '../../Context/CartContext'
+
 import  "./ItemStyle.css";
 
 
