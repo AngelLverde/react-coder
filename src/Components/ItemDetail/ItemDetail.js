@@ -28,7 +28,7 @@ import { Item } from "../Item/Item";
        { 
              goToCart 
               ? <Link to='/cart' > <button> Finalizar la compra</button></Link>
-           :<ItemCount initial={0} stock = {product.stock} on add={onAdd} />
+           :<ItemCount initial={0} stock = {product.stock} onadd={onAdd} />
 }
        </>
 

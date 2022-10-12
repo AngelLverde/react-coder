@@ -28,7 +28,7 @@ const Navbar = () => {
 <Nav categorias={categorias} />
         </NavLink>
         
-        <NavLink to= "/Cart"> 
+        <NavLink to= "/cart"> 
         <CartWidget /> 
         </NavLink>
         
