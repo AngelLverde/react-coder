@@ -10,6 +10,7 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
 
     const categorias = [
+        { nombre: 'Home', ruta: ''},
         {id:0, nombre: 'Celulares', ruta:'/categoria/Celulares'},
         {id:1, nombre: 'Tablets', ruta:'/categoria/Tablets'},
         {id:2, nombre: 'Parlantes', ruta:'/categoria/Parlantes'},

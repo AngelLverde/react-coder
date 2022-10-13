@@ -1,8 +1,8 @@
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useEffect, useState } from "react";
-import { customFecth } from "../../Components/utils/customFetch"
+
 import {useParams} from 'react-router-dom';
-import { products } from "../../assets/productos";
+
 import { db } from '../firebase/Firebase';
 import { doc, getDoc, collection,} from 'firebase/firestore'
 
@@ -30,13 +30,6 @@ getDoc(refDoc)
 })
 
 }, [detalleId]); 
-
-
-
-
-
-
-
 
 
         // customFecth (products).then((response) => {

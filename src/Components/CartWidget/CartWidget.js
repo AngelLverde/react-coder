@@ -1,6 +1,7 @@
 import React from "react";
 import '../CartWidget/CartWidget.css';
 import { useCartContext } from "../../Context/CartContext";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -9,10 +10,13 @@ import { useCartContext } from "../../Context/CartContext";
    
     return (  
       <>
+      <NavLink to="/cart">
+      <i className="bi-cart"></i>
+        <span> {totalProducts() || ''} </span>
+
+      </NavLink>
       
-      
-        <i className="bi-cart"> </i>
-        <sapan> {totalProducts() || ''} </sapan>
+       
 
         </>
    );

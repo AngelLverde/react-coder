@@ -6,7 +6,7 @@ import { useState, } from "react";
 import { useParams } from "react-router-dom";
 import { ItemCount } from "../../ItemCount/ItemCount";
 import { db } from '../../firebase/Firebase'
-import { doc, getDocs, collection, query, where} from 'firebase/firestore';
+import {getDocs, collection, query, where} from 'firebase/firestore';
 
 
 
