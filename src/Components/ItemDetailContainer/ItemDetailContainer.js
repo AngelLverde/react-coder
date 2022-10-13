@@ -4,7 +4,7 @@ import { customFecth } from "../../Components/utils/customFetch"
 import {useParams} from 'react-router-dom';
 import { products } from "../../assets/productos";
 import { db } from '../firebase/Firebase';
-import { doc, getDocs, collection, query, where} from 'firebase/firestore'; 
+import { doc, getDoc, collection,} from 'firebase/firestore'
 
 
 
@@ -14,24 +14,41 @@ import { doc, getDocs, collection, query, where} from 'firebase/firestore';
 const ItemDetailContainer = () => {
 
     const [ product, setProduct] = useState({})
-    const { detalleId } = useParams();
+    const { detalleId } = useParams() 
+    console.log(detalleId);
     
-    
-    useEffect (() =>{ 
-
-         const productsCollection = collection (db, 'lista de productos'); 
-         const refDoc = doc(productsCollection, detalleId);
-        getDocs(refDoc)
-        .then((resultado) =>{
-           setProduct({
-            id: resultado.id,
-            ...resultado.data()
-           })
+    useEffect (() => { 
+const productsCollection = collection (db, 'lista de productos')
+const refDoc = doc (productsCollection, detalleId)
+getDoc(refDoc)
+.then((result ) => {
+    setProduct ( 
+        { 
+       id: result.id,
+       ...result.data(),
         })
+})
 
-        }, [detalleId]);
+}, [detalleId]); 
 
 
+
+
+
+
+
+
+
+        // customFecth (products).then((response) => {
+        //     console.log(response)
+        //     const product = response.find(
+        //         (product) => product.id === Number(detalleId)
+        //     )
+        //     setProduct(product)
+        // })
+    
+    
+    
 
     return (
         
@@ -40,11 +57,7 @@ const ItemDetailContainer = () => {
       
             </>
     
-            
         
-        
-    )
+    );
 }
-
-
- export default ItemDetailContainer
+ export default ItemDetailContainer;
