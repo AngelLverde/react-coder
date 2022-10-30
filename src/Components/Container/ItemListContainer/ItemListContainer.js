@@ -1,12 +1,10 @@
 import { useEffect } from "react";
 import { ItemList } from "../../ItemList/ItemList";
-import { products } from "../../../assets/productos";
-import { customFecth } from "../../utils/customFetch";
 import { useState, } from "react";
 import { useParams } from "react-router-dom";
-import { ItemCount } from "../../ItemCount/ItemCount";
 import { db } from '../../firebase/Firebase'
 import {getDocs, collection, query, where} from 'firebase/firestore';
+import "./ItemListContainer.css";
 
 
 
@@ -42,36 +40,25 @@ getDocs(productosFiltrados)
     })
 }, [idCategoria])
 
-// setLoading(true)
-// customFecth(products)
-// .then(res => { 
-//     setLoading(false)
-//     setListProducts(res)
-//     if (idCategoria) {
-//         const productosFiltrados = products.filter (products => products.categoria === idCategoria)
-//         setListProducts(productosFiltrados)
-//     } else {
-//         setListProducts(products)
-//     }
-// });
-
-
-
-const onAdd = (quantity) => {
-    console.log(`compraste ${quantity} unidades`);
-}
  
     return (
         <>
+        <h1 className="texto">{greeting}</h1> 
+<div className="flex-container">
 
-    <h1> {greeting}</h1> 
+
+
     {
         loading ? 
-        <text> Aguarde mientras se cargan los productos</text>:
+        <text > Aguarde mientras se cargan los productos</text>:
+        
+       
       
-       <ItemList listProducts={listProducts}/> }
+       <ItemList  listProducts={listProducts}/> }
 
-       <ItemCount initial={0} stock={5} onAdd={onAdd} />
+       
+</div>
+    
 
     </>
 

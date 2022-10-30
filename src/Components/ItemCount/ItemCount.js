@@ -1,8 +1,7 @@
 import {useState} from 'react'
-import { products } from '../../assets/productos';
-import { CartContext } from '../../Context/CartContext'
 
-const ItemCount = ({initial, stock,onAdd}) => {
+
+const ItemCount = ({initial, stock, onAdd}) => {
 
     const [count, setCount] = useState(initial);
 
@@ -29,45 +28,5 @@ const ItemCount = ({initial, stock,onAdd}) => {
     
     )
 }
-
-
-
-// import React, {useState} from "react";
-
-// const ItemCount = ({stock,initial}) => {
-// const [estado,setEstado] =useState();
-// const [contador,setContador] = useState(1);
-// const [users, setUsers] = useState();
-
-
-// const sumar = () => {
-//     setContador (contador + 1);
-// }
-// const restar = () => {
-//     setContador (contador - 1);
-// }
-// const reset = () => {
-//     setContador (0);
-// }
-
-//     return (
-//         <>
-//         <h3> Remeras</h3>
-//         <h1>{contador}</h1>
-//         <button onClick ={sumar}> +1 </button>
-       
-//         <button onClick ={restar}> -1 </button>
-        
-//         <button onClick ={reset}> Agregar al carrito </button>
-//         </>
- 
-
-//     )
-// }
-
-
-
-
-
 
 export  { ItemCount }

@@ -7,12 +7,16 @@ import { NavLink } from "react-router-dom";
 
   export const CartWidget = () => {
   const {totalProducts} = useCartContext(); 
+  
+  
    
     return (  
       <>
       <NavLink to="/cart">
       <i className="bi-cart"></i>
-        <span> {totalProducts() || ''} </span>
+        <span> 
+        {totalProducts() || ""}
+          </span> 
 
       </NavLink>
       

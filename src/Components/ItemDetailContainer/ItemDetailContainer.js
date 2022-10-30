@@ -1,8 +1,6 @@
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useEffect, useState } from "react";
-
 import {useParams} from 'react-router-dom';
-
 import { db } from '../firebase/Firebase';
 import { doc, getDoc, collection,} from 'firebase/firestore'
 
@@ -32,13 +30,7 @@ getDoc(refDoc)
 }, [detalleId]); 
 
 
-        // customFecth (products).then((response) => {
-        //     console.log(response)
-        //     const product = response.find(
-        //         (product) => product.id === Number(detalleId)
-        //     )
-        //     setProduct(product)
-        // })
+       
     
     
     
@@ -46,8 +38,13 @@ getDoc(refDoc)
     return (
         
       <> 
-            <ItemDetail product ={product}/>
-      
+      <div className="itemdetail">
+      <ItemDetail product ={product}/>
+
+      </div>
+    
+           
+            
             </>
     
         

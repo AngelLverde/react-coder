@@ -1,0 +1,26 @@
+.footer{
+    margin-top: 4rem;
+    margin-bottom: 5px;
+    padding: 25px;
+    background-color:rgb(43, 35, 35);
+    color: white;
+
+}
+.facebook{
+    color: rgb(101, 101, 223);
+}
+.instagram {
+    color:rgb(117, 54, 54);
+}
+.whatsapp{
+    color: green;
+}
+.texto{
+    text-align: center;
+    font-size: 17px;
+}
+.p{
+    text-align: center;
+    font-size: small;
+
+}

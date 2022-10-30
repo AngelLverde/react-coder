@@ -1,13 +1,17 @@
 .cartView {
     display: flex;
     border-bottom: 1px solid gray;
-    max-width: 500px;
+    max-width: 15%;
     margin: 1rem auto;
+    background-color: black;
 
 }
 
-
-.cartView img {
-    width: 200px;
-    margin-right: 1rem;
+.imagen-cart {
+    width: 12%;
+    margin-top: 7px;
+    border-style:groove;
+}
+.eliminar-producto{
+    border-radius: 25px;
 }

@@ -3,10 +3,13 @@ import Navbar from "./Components/Navbar/Navbar";
 import ItemListContainer from "./Components/Container/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 import Cart from "./Components/Cart/Cart";
+import Footer from "./Components/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartProvider from './Context/CartContext';
-import { CartContext } from "./Context/CartContext";
-import { useContext } from "react";
+import './EstilosApp.css';
+import  Form  from "./Components/Form";
+
+
 
 
 
@@ -20,6 +23,7 @@ const mensaje ='Bienvenidos a Cartagena Showroom';
 
   return (
     <> 
+    <div className="EstilosApp"> 
     <BrowserRouter>
     <CartProvider>
     <Navbar/>
@@ -28,11 +32,15 @@ const mensaje ='Bienvenidos a Cartagena Showroom';
   <Route path='/categoria/:idCategoria' element={<ItemListContainer greeting ={mensaje}/>}/>
   <Route path='/detalle/:detalleId' element={ <ItemDetailContainer/>}/>
   <Route path='/cart' element={<Cart/>}/>
+  <Route path='/checkout' element={<Form/>}/>
 </Routes>
        </CartProvider>
 
     
     </BrowserRouter>
+    <Footer/>
+    </div>
+    
    
     
     </>
