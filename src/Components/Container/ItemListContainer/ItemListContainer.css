@@ -2,12 +2,14 @@
     display:grid;
     width: 100%;
     height: auto;
-    grid-template-columns: 450px 450px 430px;
+    flex-direction: row;
+    grid-template-columns: 55ch 55ch 55ch;
     grid-template-rows: auto;
-    grid-template-areas: unset;
-    row-gap: 3;
+    row-gap: 12ch;
+    
+    text-align: center;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     margin: 0;
     padding: 25px;
   
@@ -15,7 +17,17 @@
 .texto{
   
 text-align: center;
-   font-weight:400;
-   font-size: 150px;
+   font-weight: bold;
+   font-size: 250px;
 
+
+}
+
+.loading{
+  
+   display: inline-block;
+    justify-content: center;
+    text-align: center;
+    font-size: large;
+    align-items: center;
 }

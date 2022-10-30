@@ -43,14 +43,15 @@ getDocs(productosFiltrados)
  
     return (
         <>
-        <h1 className="texto">{greeting}</h1> 
+        <h1 className="texto">{greeting}</h1>
+
 <div className="flex-container">
 
 
 
     {
         loading ? 
-        <text > Aguarde mientras se cargan los productos</text>:
+        <text className="loading"> Aguarde mientras se cargan los productos</text>:
         
        
       

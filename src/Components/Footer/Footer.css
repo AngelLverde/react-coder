@@ -8,12 +8,15 @@
 }
 .facebook{
     color: rgb(101, 101, 223);
+    margin: 5px;
 }
 .instagram {
     color:rgb(117, 54, 54);
+    margin: 5px;
 }
 .whatsapp{
     color: green;
+    margin: 5px;
 }
 .texto{
     text-align: center;

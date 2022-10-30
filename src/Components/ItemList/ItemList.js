@@ -10,6 +10,9 @@ const ItemList = ({listProducts}) => {
         
         {listProducts.map((prod, i )  => <Item key={`${ prod.product}-${i}`} product={prod}/>)}
        
+       
+        
+        
         </>
     );
 }

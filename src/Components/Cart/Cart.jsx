@@ -6,13 +6,12 @@ import CartView from "../CartView/CartView";
 import './Cart.css';
 import { db } from '../firebase/Firebase'
 import { collection, addDoc, serverTimestamp, doc, updateDoc } from "firebase/firestore";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2';
 
 const Cart = () => {
     const { cart, totalPrice, clearCart,} = useCartContext();
     const [ userData, SetUserData] = useState({});
-    const [, setVentasCollection] = useState();
+    const [ventasCollection, setVentasCollection] = useState();
     
     const inputChange = (event) => {
         SetUserData ({
@@ -38,9 +37,9 @@ const Cart = () => {
                 actualizarStock(products);
             });
 
+           
 
-
-            toast('Felicitaciones, la compra se realizó con éxito!', {
+           Swal.fire('Felicitaciones, la compra se realizó con éxito!', {
                 position: "bottom-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -54,20 +53,20 @@ const Cart = () => {
             
             setTimeout(()=>{
             clearCart();    
-            },2000)
+            },3000)
 
 
             } else {
-            toast('Verifique sus datos para continuar', {
-                position: "bottom-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-            })
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'No completo bien sus datos',
+                    footer: '<a href="">Why do I have this issue?</a>'
+                  })
+                  setTimeout(()=>{
+                    clearCart();    
+                    },3000)
+            
            
         } 
     
@@ -127,7 +126,7 @@ if (cart.length === 0 ) {
   <Link className to="/"><button className="finalizar-compra">Cancelar</button></Link>
 </div>    
     </form>
-    <ToastContainer />
+   
 </div>
         </>
         
