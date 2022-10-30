@@ -25,6 +25,7 @@ const mensaje ='Bienvenidos a Cartagena Showroom';
   return (
     <> 
     <div className="EstilosApp"> 
+    
     <BrowserRouter>
     <CartProvider>
     <Navbar/>
